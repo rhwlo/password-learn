@@ -1,21 +1,28 @@
-This is a simple script to help you practice learning a new password!
+This is a simple script to help you practice learning a new password! By
+default, the password hash will be written to `.pw-learn` in your home
+directory, but you can change the destination by setting the environment
+variable `PASSWORD_LEARN_FILENAME`.
 
-To setup:
+To install:
 
-    virtualenv -p `which python3` vendor
-    vendor/bin/pip install -r requirements.txt
+```bash
+poetry install
+```
 
-To set a password (or practice a password you’ve set) in `~/.pw-learn`:
+To store a `bcrypt`ed password to practice:
 
-    ./password_learn.py
+```bash
+password_learn --reset
+```
 
-To set a password (or practice a password you’ve set) in `/foo/bar/example.txt`:
+To practice your password once:
 
-    PASSWORD_LEARN_FILENAME=/foo/bar/example.txt ./password_learn.py
+```bash
+password_learn
+```
 
-To reset a password:
+To practice it 3 times:
 
-    ./password_learn.py reset
-    # or
-    PASSWORD_LEARN_FILENAME=/foo/bar/example.txt ./password_learn.py reset
-
+```bash
+password_learn --repeat 3
+```
