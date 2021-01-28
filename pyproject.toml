@@ -5,8 +5,8 @@ description = "A simple script to practice learning a new password"
 authors = ["Joshu Coats <rhwlo@rhwlo.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-bcrypt = "^3.1"
+python = ">=3.7"
+bcrypt = "^3.2.0"
 
 [tool.poetry.dev-dependencies]
 
